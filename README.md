@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
+# Frontend Frameworks - React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application built with TypeScript and Vite. It serves as a modern frontend playground featuring a simple counter component, automated testing with Vitest, and a polished UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19**: Utilizing the latest React features for efficient UI rendering.
+- **TypeScript**: Ensuring type safety and enhanced developer experience.
+- **Vite**: Offering a blazing fast development server and optimized build process.
+- **Vitest**: Running unit tests with speed and accuracy, compatible with Vite.
+- **Modern Styling**: Using CSS variables and responsive design principles for a clean look.
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+Make sure you have Node.js installed on your machine.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  Clone the repository.
+2.  Install dependencies:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+    ```bash
+    npm install
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+## Available Scripts
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+In the project directory, you can run:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+### `npm run dev`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+Runs the app in development mode.
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder. It bundles React in production mode and optimizes the build for best performance.
+
+### `npm run preview`
+
+Locally preview the production build.
+
+### `npm run lint`
+
+Runs ESLint to check for code quality issues.
+
+### `npm test`
+
+Launches Vitest to run component tests.
+
+## Project Structure
+
+- `src/App.tsx`: The main component containing the counter logic and UI.
+- `src/App.css`: Styles for the App component.
+- `src/App.test.tsx`: Component tests for App, verifying rendering and interactions.
+- `vite.config.ts`: Configuration for Vite and Vitest.
+
+## Recent Updates
+
+- **UI Enhancements**: Buttons are now grouped in a row layout with improved styling (padding, borders, hover effects).
+- **Testing Integration**: Added `vitest` and `@testing-library/react` for robust component testing. The App component is fully tested for initial render, increment, and decrement actions.
