@@ -180,3 +180,27 @@
     border-right-color: var(--border);
   }
 }
+
+.card {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+button {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  font-family: inherit;
+  font-size: inherit;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
